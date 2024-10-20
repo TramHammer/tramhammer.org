@@ -1,19 +1,13 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-
-class MyDocument extends Document {
-    render() {
-        return (
-            <Html>
-                <Head>
-                    {/* You can add custom meta tags, links, or scripts here */}
-                </Head>
-                <body>
-                    <Main />
-                    <NextScript />
-                </body>
-            </Html>
-        );
-    }
+import { Html, Head, Main, NextScript } from 'next/document'
+ 
+export default function Document() {
+  return (
+    <Html>
+      <Head />
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )
 }
-
-export default MyDocument;

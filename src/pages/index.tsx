@@ -1,67 +1,65 @@
 import Link from 'next/link'
 import Head from 'next/head';
+import Image from 'next/image';
 import styles from '../styles/index.module.css';
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function Page() {
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <div className={styles.logonav}>
-            <span className={styles.logo}>
-              <Link href="/">Logo</Link>
-            </span>
-        </div>
-        <nav>
-          <div className={styles.nav}>
-            <ul>
-              <li className={styles.floatleft}>
-                <Link className={styles.link} href="/">Home</Link>
-              </li>
-              <li className={styles.floatleft}>
-                <Link className={styles.link} href="/about">About</Link>
-              </li>
-              <li className={styles.floatleft}>
-                <Link className={styles.link} href="/services">Services</Link>
-              </li>
-            </ul>
-            <ul>
-              <li className={styles.floatright}>
-                <Link className={styles.link} href="#0">Login</Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div className={styles.heroText}>
-          <h1>Welcome to shit</h1>
-          <p>Your one-stop solution for all your needs.</p>
+    <>
+      <Head>
+        <title>Home | TramHammer Technologies</title>
+      </Head>
+      <Navbar />
+      <div className="p-4">
+        <CardGroup>
+          <Card>
+            <Card.Img variant="top" src="holder.js/100px160" />
+            <Card.Body>
+              <Card.Title>Card title</Card.Title>
+              <Card.Text>
+                This is a wider card with supporting text below as a natural lead-in
+                to additional content. This content is a little bit longer.
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer>
+              <small className="text-muted">Last updated 3 mins ago</small>
+            </Card.Footer>
+          </Card>
+          <Card>
+            <Card.Img variant="top" src="holder.js/100px160" />
+            <Card.Body>
+              <Card.Title>Card title</Card.Title>
+              <Card.Text>
+                This card has supporting text below as a natural lead-in to
+                additional content.{' '}
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer>
+              <small className="text-muted">Last updated 3 mins ago</small>
+            </Card.Footer>
+          </Card>
+          <Card>
+            <Card.Img variant="top" src="holder.js/100px160" />
+            <Card.Body>
+              <Card.Title>Card title</Card.Title>
+              <Card.Text>
+                This is a wider card with supporting text below as a natural lead-in
+                to additional content. This card has even longer content than the
+                first to show that equal height action.
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer>
+              <small className="text-muted">Last updated 3 mins ago</small>
+            </Card.Footer>
+          </Card>
+        </CardGroup>
       </div>
-      </header>
-      <section className={styles.cards}>
-        <div className={styles.card}>
-          <h2>System Administration</h2>
-          <p>Efficient and reliable system administration services to keep your infrastructure running smoothly.</p>
 
-        </div>
-        <div className={styles.card}>
-          <h2>Technical Support</h2>
-          <p>24/7 technical support to assist you with any issues and ensure minimal downtime.</p>
-        </div>
-        <div className={styles.card}>
-          <h2>Management and Monitoring</h2>
-          <p>Comprehensive management and monitoring solutions to keep your systems secure and optimized.</p>
-
-        </div>
-      </section>
-      <footer className={styles.footer}>
-        <div className={styles.footerContent}>
-          <div className={styles.footerLinks}>
-            <Link className={styles.link} href="/privacy">Privacy Policy</Link>
-            <Link className={styles.link} href="/terms">Terms of Service</Link>
-            <Link className={styles.link} href="/contact">Contact Us</Link>
-          </div>
-          <p>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
-        </div>
-      </footer>
-    </div>
+      <Footer />
+    </>
   )
 }
